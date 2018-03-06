@@ -12544,11 +12544,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\q5117346\\source\\repos\\MapMe-FYP\\MapMe-FYP\\MapMe-FYP.csproj",
+      "projectUniqueName": "C:\\Users\\q5117346\\source\\repos\\MapMe-FYP\\MapMe-FYP\\MapMe-FYP\\MapMe-FYP.csproj",
       "projectName": "MapMe-FYP",
-      "projectPath": "C:\\Users\\q5117346\\source\\repos\\MapMe-FYP\\MapMe-FYP\\MapMe-FYP.csproj",
+      "projectPath": "C:\\Users\\q5117346\\source\\repos\\MapMe-FYP\\MapMe-FYP\\MapMe-FYP\\MapMe-FYP.csproj",
       "packagesPath": "C:\\Users\\q5117346\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\q5117346\\source\\repos\\MapMe-FYP\\MapMe-FYP\\obj\\",
+      "outputPath": "C:\\Users\\q5117346\\source\\repos\\MapMe-FYP\\MapMe-FYP\\MapMe-FYP\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
