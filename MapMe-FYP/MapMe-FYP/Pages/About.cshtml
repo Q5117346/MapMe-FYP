@@ -1,9 +1,13 @@
 ﻿@page
 @model AboutModel
 @{
-    ViewData["Title"] = "About";
+    ViewData["Title"] = "About MapMe";
+    ViewData["SubTitle"] = "MapMe";
 }
 <h2>@ViewData["Title"]</h2>
-<h3>@Model.Message</h3>
+<h3>@ViewData["SubTitle"]</h3>
+@*
+    <h3>@Model.Message</h3>
+*@
 
-<p>Use this area to provide additional information.</p>
+<p>MapMe is a service which can take geographical data and display it in a map format.</p>
