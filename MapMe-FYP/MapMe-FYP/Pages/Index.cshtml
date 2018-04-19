@@ -27,47 +27,84 @@
       firebase.initializeApp(config);
     </script>
     *@
+
+@*
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <style type="text/css">
+            #map {
+                height: 100%;
+            }
+
+            html, body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="map"></div>
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6YloPwWoNA7HcVfD1sVLQuvHqqwnLAAA
+            &libraries=visualization&callback=initMap">
+        </script>
+
+        /**
+        * The JavaScript code that creates the firebase map goes between the empty script tags below.
+        */
+        <script>
+            function initMap() {
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    center: { lat: 0, lng: 0 },
+                    zoom: 3,
+                    styles: [{
+                        featureType: 'poi',
+                        stylers: [{ visibility: 'off' }]  // Turn off points of interest.
+                    }, {
+                        featureType: 'transit.station',
+                        stylers: [{ visibility: 'off' }]  // Turn off bus stations, train stations, etc.
+                    }],
+                    disableDoubleClickZoom: true
+                });
+            }
+        </script>
+
+    </body>
+    </html>
+*@
+
 <!DOCTYPE html>
 <html>
 <head>
-    <style type="text/css">
+    <style>
         #map {
-            height: 100%;
-        }
-
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
+            height: 400px;
+            width: 100%;
         }
     </style>
 </head>
 <body>
+    <h3>My Google Maps Demo</h3>
     <div id="map"></div>
-    <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6YloPwWoNA7HcVfD1sVLQuvHqqwnLAAA
-        &libraries=visualization&callback=initMap">
-    </script>
-
-    /**
-    * The JavaScript code that creates the firebase map goes between the empty script tags below.
-    */
     <script>
         function initMap() {
+            var uluru = { lat: -25.363, lng: 131.044 };
             var map = new google.maps.Map(document.getElementById('map'), {
-                center: { lat: 0, lng: 0 },
-                zoom: 3,
-                styles: [{
-                    featureType: 'poi',
-                    stylers: [{ visibility: 'off' }]  // Turn off points of interest.
-                }, {
-                    featureType: 'transit.station',
-                    stylers: [{ visibility: 'off' }]  // Turn off bus stations, train stations, etc.
-                }],
-                disableDoubleClickZoom: true
+                zoom: 4,
+                center: uluru
+            });
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
             });
         }
     </script>
-
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBDW3-0bPIBFdW7_YkLukWk9s8A_908Mw&callback=initMap">
+    </script>
 </body>
 </html>
+
+@*AIzaSyBBDW3-0bPIBFdW7_YkLukWk9s8A_908Mw*@
