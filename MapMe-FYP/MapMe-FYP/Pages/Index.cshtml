@@ -3,77 +3,7 @@
 @{
     ViewData["Title"] = "MapMe";
 }
-    @*
-    <h2>@ViewData["Title"]</h2>
-
-    <div id="map">
-
-        <iframe width="900" height="675" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJX_Z6nRDtfkgReMCjMM9iuB8&key=AIzaSyCEORUOlKsokVVJhWjHLpNlF8QbxqGS5yg" allowfullscreen></iframe>
-
-    </div>
-
-
-    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyB6YloPwWoNA7HcVfD1sVLQuvHqqwnLAAA",
-        authDomain: "mapme-fyp.firebaseapp.com",
-        databaseURL: "https://mapme-fyp.firebaseio.com",
-        projectId: "mapme-fyp",
-        storageBucket: "mapme-fyp.appspot.com",
-        messagingSenderId: "859866713041"
-      };
-      firebase.initializeApp(config);
-    </script>
-    *@
-
-@*
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <style type="text/css">
-            #map {
-                height: 100%;
-            }
-
-            html, body {
-                height: 100%;
-                margin: 0;
-                padding: 0;
-            }
-        </style>
-    </head>
-    <body>
-        <div id="map"></div>
-        <script async defer
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6YloPwWoNA7HcVfD1sVLQuvHqqwnLAAA
-            &libraries=visualization&callback=initMap">
-        </script>
-
-        /**
-        * The JavaScript code that creates the firebase map goes between the empty script tags below.
-        */
-        <script>
-            function initMap() {
-                var map = new google.maps.Map(document.getElementById('map'), {
-                    center: { lat: 0, lng: 0 },
-                    zoom: 3,
-                    styles: [{
-                        featureType: 'poi',
-                        stylers: [{ visibility: 'off' }]  // Turn off points of interest.
-                    }, {
-                        featureType: 'transit.station',
-                        stylers: [{ visibility: 'off' }]  // Turn off bus stations, train stations, etc.
-                    }],
-                    disableDoubleClickZoom: true
-                });
-            }
-        </script>
-
-    </body>
-    </html>
-*@
+<h2>@ViewData["Title"]</h2>
 
 <!DOCTYPE html>
 <html>
@@ -86,17 +16,16 @@
     </style>
 </head>
 <body>
-    <h3>MapMe</h3>
     <div id="map"></div>
     <script>
         function initMap() {
-            var uluru = { lat: -25.363, lng: 131.044 };
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 6,
                 center: new google.maps.LatLng(54.9, -2.5),
             });
+            var tees = { lat: 54.570755, lng: -1.235222 };
             var marker = new google.maps.Marker({
-                position: uluru,
+                position: tees,
                 map: map
             });
         }
