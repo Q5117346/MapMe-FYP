@@ -70,6 +70,26 @@
 
     <script>
         var firebase = new Firebase("https://mapme-fyp.firebaseio.com/");
+        function loadPointsFromFirebase(map) {  // pass the initialised map to the function
+            var marker = {};
+            var db = firebase.database();
+            db.ref('clicks').ones('value', points => {
+                points.forEach(point => {
+                    marker = new google.maps.Marker({
+                        map: map,
+                        position: {
+                            lat: point.val().lat,
+                            lng: point.val().lng
+                        }
+                    })
+                    marker.setMap(map) // Set market on the map
+                })
+            })
+
+
+
+        }
+        @*https://stackoverflow.com/questions/48565497/importing-geo-data-from-firebase-to-google-maps*@
         function initMap() {
             var map = new google.maps.Map(document.getElementById('map'), {
                 center: { lat: 54.9, lng: -2.5 },
@@ -82,6 +102,18 @@
                     stylers: [{ visibility: 'off' }]  // Turn off bus stations, train stations, etc.
                 }],
                 disableDoubleClickZoom: true
+            });
+            // Create a heatmap.
+            var heatmap = new google.maps.visualization.HeatmapLayer({
+                data: [],
+                map: map,
+                radius: 16
+            });
+            // Listen for clicks and add the location of the click to firebase.
+            map.addListener('click', function (e) {
+                data.lat = e.latLng.lat();
+                data.lng = e.latLng.lng();
+                @*addToFirebase(data);*@
             });
         }
     </script>
