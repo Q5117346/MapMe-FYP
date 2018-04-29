@@ -20,3 +20,14 @@ C:\Users\q5117346\source\repos\MapMe-FYP\MapMe-FYP\MapMe-FYP\obj\Debug\netcoreap
 C:\Users\q5117346\source\repos\MapMe-FYP\MapMe-FYP\MapMe-FYP\obj\Debug\netcoreapp2.0\MapMe-FYP.AssemblyInfo.cs
 C:\Users\q5117346\source\repos\MapMe-FYP\MapMe-FYP\MapMe-FYP\obj\Debug\netcoreapp2.0\MapMe-FYP.dll
 C:\Users\q5117346\source\repos\MapMe-FYP\MapMe-FYP\MapMe-FYP\obj\Debug\netcoreapp2.0\MapMe-FYP.pdb
+C:\Users\ryana\Documents\GitHub\MapMe-FYP\MapMe-FYP\MapMe-FYP\bin\Debug\netcoreapp2.0\MapMe-FYP.deps.json
+C:\Users\ryana\Documents\GitHub\MapMe-FYP\MapMe-FYP\MapMe-FYP\bin\Debug\netcoreapp2.0\MapMe-FYP.runtimeconfig.json
+C:\Users\ryana\Documents\GitHub\MapMe-FYP\MapMe-FYP\MapMe-FYP\bin\Debug\netcoreapp2.0\MapMe-FYP.runtimeconfig.dev.json
+C:\Users\ryana\Documents\GitHub\MapMe-FYP\MapMe-FYP\MapMe-FYP\bin\Debug\netcoreapp2.0\MapMe-FYP.dll
+C:\Users\ryana\Documents\GitHub\MapMe-FYP\MapMe-FYP\MapMe-FYP\bin\Debug\netcoreapp2.0\MapMe-FYP.pdb
+C:\Users\ryana\Documents\GitHub\MapMe-FYP\MapMe-FYP\MapMe-FYP\obj\Debug\netcoreapp2.0\MapMe-FYP.csprojResolveAssemblyReference.cache
+C:\Users\ryana\Documents\GitHub\MapMe-FYP\MapMe-FYP\MapMe-FYP\obj\Debug\netcoreapp2.0\MapMe-FYP.csproj.CoreCompileInputs.cache
+C:\Users\ryana\Documents\GitHub\MapMe-FYP\MapMe-FYP\MapMe-FYP\obj\Debug\netcoreapp2.0\MapMe-FYP.AssemblyInfoInputs.cache
+C:\Users\ryana\Documents\GitHub\MapMe-FYP\MapMe-FYP\MapMe-FYP\obj\Debug\netcoreapp2.0\MapMe-FYP.AssemblyInfo.cs
+C:\Users\ryana\Documents\GitHub\MapMe-FYP\MapMe-FYP\MapMe-FYP\obj\Debug\netcoreapp2.0\MapMe-FYP.dll
+C:\Users\ryana\Documents\GitHub\MapMe-FYP\MapMe-FYP\MapMe-FYP\obj\Debug\netcoreapp2.0\MapMe-FYP.pdb

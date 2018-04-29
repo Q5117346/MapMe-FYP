@@ -12535,7 +12535,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\q5117346\\.nuget\\packages\\": {},
+    "C:\\Users\\ryana\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -12544,17 +12544,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\q5117346\\Documents\\GitHub\\MapMe-FYP\\MapMe-FYP\\MapMe-FYP\\MapMe-FYP.csproj",
+      "projectUniqueName": "C:\\Users\\ryana\\Documents\\GitHub\\MapMe-FYP\\MapMe-FYP\\MapMe-FYP\\MapMe-FYP.csproj",
       "projectName": "MapMe-FYP",
-      "projectPath": "C:\\Users\\q5117346\\Documents\\GitHub\\MapMe-FYP\\MapMe-FYP\\MapMe-FYP\\MapMe-FYP.csproj",
-      "packagesPath": "C:\\Users\\q5117346\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\q5117346\\Documents\\GitHub\\MapMe-FYP\\MapMe-FYP\\MapMe-FYP\\obj\\",
+      "projectPath": "C:\\Users\\ryana\\Documents\\GitHub\\MapMe-FYP\\MapMe-FYP\\MapMe-FYP\\MapMe-FYP.csproj",
+      "packagesPath": "C:\\Users\\ryana\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ryana\\Documents\\GitHub\\MapMe-FYP\\MapMe-FYP\\MapMe-FYP\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\q5117346\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ryana\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -12580,7 +12580,7 @@
         "dependencies": {
           "Microsoft.NETCore.App": {
             "target": "Package",
-            "version": "2.0",
+            "version": "2.0.0",
             "autoReferenced": true
           },
           "Microsoft.AspNetCore.All": {
