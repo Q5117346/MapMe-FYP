@@ -15,108 +15,160 @@
         }
     </style>
 </head>
-<script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
 <body>
     <div id="map"></div>
+    <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6YloPwWoNA7HcVfD1sVLQuvHqqwnLAAA&libraries=visualization&callback=initMap"></script>
     <script>
-        function initMap() {
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 6,
-                center: new google.maps.LatLng(54.9, -2.5),
-            });
 
-            @*
-            var tees = { lat: 54.570755, lng: -1.235222 };
-            var marker = new google.maps.Marker({
-                position: tees,
-                map: map
-            });
-            *@
+        @*var locations = [
+            ['AB10', 57.148232, -2.0966479],
+            ['AB11', 57.145897, -2.0952206],
+        ];*@
 
-            // Create a <script> tag and set the USGS URL as the source.
-            var script = document.createElement('script');
-            // This example uses a local copy of the GeoJSON stored at
-            // http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp
-            script.src = 'https://developers.google.com/maps/documentation/javascript/examples/json/earthquake_GeoJSONP.js';
-            document.getElementsByTagName('head')[0].appendChild(script);
+        @*var locations = {
+            AB10: {
+                center: { lat: 57.148232, lng: -2.0966479 },
+                population: 1675.72
+            },
+            AB11: {
+                center: { lat: 57.145897, lng: -2.0952206 },
+                population: 2072.99
+            },
+        };*@
 
-        }
-        @*
-        function eqfeed_callback(results) {
-            var heatmapData = [];
-            for (var i = 0; i < results.features.length; i++) {
-                var coords = results.features[i].geometry.coordinates;
-                var latLng = new google.maps.LatLng(coords[1], coords[0]);
+        var locations = {
+            AB: {
+                center: { lat: 56.966, lng: - 2.37 },
+                population: 125010.75
+            },
+            AL: {
+                center: { lat: 51.78, lng: - 0.28 },
+                population: 43045.24
+            },
+            B: {
+                center: { lat: 52.5, lng: - 1.9 },
+                population: 164605.73
+            },
+            BA: {
+                center: { lat: 51.2, lng: - 2.6 },
+                population: 107349.44
+            },
+            BB: {
+                center: { lat: 53.75, lng: - 2.485 },
+                population: 70054.99
+            },
+            BD: {
+                center: { lat: 53.794, lng: - 1.752 },
+                population: 92352.235
+            },
+            BH: {
+                center: { lat: 50.722, lng: - 1.879 },
+                population: 103811.95
+            },
+            BL: {
+                center: { lat: 53.58, lng: - 2.41 },
+                population: 39366.17
+            },
+            BN: {
+                center: { lat: 50.911, lng: - 0.087 },
+                population: 160604.88
+            },
+            BR: {
+                center: { lat: 51.38, lng: 0.07 },
+                population: 22854.88
+            },
+            BS: {
+                center: { lat: 51.4499982, lng: - 2.5666644 },
+                population: 172287.11
+            },
+            CA: {
+                center: { lat: 54.737, lng: - 2.946 },
+                population: 107198.40
+            },
+            CB: {
+                center: { lat: 52.203, lng: 0.131 },
+                population: 111218.57
+            },
+            CF: {
+                center: { lat: 51.5999976, lng: - 3.333332 },
+                population: 116984.55
+            },
+            CH: {
+                center: { lat: 53.374, lng: - 2.94 },
+                population: 150582.88
+            },
+            CM: {
+                center: { lat: 51.7, lng: 0.45 },
+                population: 121651.24
+            },
+            CO: {
+                center: { lat: 51.901052, lng: 0.931200 },
+                population: 73527.42
+            },
+            CR: {
+                center: { lat: 51.35, lng: -0.1 },
+                population: 30070.03
+            },
+            CT: {
+                center: { lat: 51.233, lng: 1.159 },
+                population: 94788.56
+            },
+            CV: {
+                center: { lat: 52.4, lng: -1.5 },
+                population: 118746.33
+            },
+            CW: {
+                center: { lat: 53.514496, lng: -2.4427796 },
+                population: 57205.35
+            },
+        };
 
-                var magnitude = results.features[i].properties.mag;
-                var weightedLoc = {
-                    location: latLng,
-                    weight: Math.pow(2, magnitude)
-                };
-                heatmapData.push(weightedLoc);
-            }
-            var heatmap = new google.maps.visualization.HeatmapLayer({
-                data: heatmapData,
-                dissipating: false,
-                map: map
-            });
-        }
-            *@
-
-    </script>
-    <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBDW3-0bPIBFdW7_YkLukWk9s8A_908Mw&libraries=visualization&callback=initMap">
-    </script>
-
-    <script>
         var firebase = new Firebase("https://mapme-fyp.firebaseio.com/");
-        function loadPointsFromFirebase(map) {  // pass the initialised map to the function
-            var marker = {};
-            var db = firebase.database();
-            db.ref('clicks').ones('value', points => {
-                points.forEach(point => {
-                    marker = new google.maps.Marker({
-                        map: map,
-                        position: {
-                            lat: point.val().lat,
-                            lng: point.val().lng
-                        }
-                    })
-                    marker.setMap(map) // Set market on the map
-                })
-            })
-
-
-
-        }
-        @*https://stackoverflow.com/questions/48565497/importing-geo-data-from-firebase-to-google-maps*@
         function initMap() {
             var map = new google.maps.Map(document.getElementById('map'), {
                 center: { lat: 54.9, lng: -2.5 },
                 zoom: 6,
                 styles: [{
                     featureType: 'poi',
-                    stylers: [{ visibility: 'off' }]  // Turn off points of interest.
+                    stylers: [{ visibility: 'off' }]
                 }, {
                     featureType: 'transit.station',
-                    stylers: [{ visibility: 'off' }]  // Turn off bus stations, train stations, etc.
+                    stylers: [{ visibility: 'off' }]
                 }],
                 disableDoubleClickZoom: true
             });
-            // Create a heatmap.
-            var heatmap = new google.maps.visualization.HeatmapLayer({
-                data: [],
-                map: map,
-                radius: 16
+
+            map.data.setStyle(function (feature) {
+                var magnitude = feature.getProperty('mag');
+                return {
+                    icon: getCircle(magnitude)
+                };
             });
-            // Listen for clicks and add the location of the click to firebase.
-            map.addListener('click', function (e) {
-                data.lat = e.latLng.lat();
-                data.lng = e.latLng.lng();
-                @*addToFirebase(data);*@
-            });
+        
+            var marker, i;
+
+            @*for (i = 0; i < locations.length; i++) {
+                marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                    map: map
+                });
+            }*@
+
+            for (var location in locations) {
+                // Add the circle for this postcode to the map.
+                var postcodeCircle = new google.maps.Circle({
+                    strokeColor: '#FF0000',
+                    strokeOpacity: 0.8,
+                    strokeWeight: 2,
+                    fillColor: '#FF0000',
+                    fillOpacity: 0.35,
+                    map: map,
+                    center: locations[location].center,
+                    radius: Math.sqrt(locations[location].population) * 50
+                });
+            }
         }
     </script>
-
 </body>
 </html>
