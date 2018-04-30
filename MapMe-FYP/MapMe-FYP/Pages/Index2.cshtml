@@ -510,6 +510,14 @@
             var map = new google.maps.Map(document.getElementById('map'), {
                 center: { lat: 54.9, lng: -2.5 },
                 zoom: 6,
+                styles: [{
+                    featureType: 'poi',
+                    stylers: [{ visibility: 'off' }]
+                }, {
+                    featureType: 'transit.station',
+                    stylers: [{ visibility: 'off' }]
+                }],
+                disableDoubleClickZoom: true
             });
 
             for (var location in locations) {
@@ -523,10 +531,20 @@
                     map: map,
                     center: locations[location].center,
                     radius: Math.sqrt(locations[location].population) * 50,
-                    name: locations[location],
+                    name: locations.location,
                     population: locations[location].population,
+                    clickable: true
                 });
             }
+
+            var infoWindow = new google.maps.InfoWindow({
+                content: '<div><strong>' + locations.location + '</strong><br>' + 'Cat Population: ' + locations[location].population + '</div>'
+            });
+
+            google.maps.event.addListener(postcodeCircle, 'click', function (ev) {
+                infoWindow.setPosition(ev.latLng);
+                infoWindow.open(map);
+            });
         }
     </script>
 </body>

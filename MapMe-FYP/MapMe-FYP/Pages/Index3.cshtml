@@ -17,6 +17,7 @@
 </head>
 <body>
     <div id="map"></div>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6YloPwWoNA7HcVfD1sVLQuvHqqwnLAAA&libraries=visualization&callback=initMap"></script>
     <script>
@@ -529,9 +530,21 @@
                     fillOpacity: 0.1,
                     map: map,
                     center: locations2[location].center,
-                    radius: Math.sqrt(locations2[location].population) * 50
+                    radius: Math.sqrt(locations2[location].population) * 50,
+                    name: locations.location,
+                    population: locations[location].population,
+                    clickable: true
                 });
             }
+
+            var infoWindow = new google.maps.InfoWindow({
+                content: '<div><strong>' + locations.location + '</strong><br>' + 'Dog Population: ' + locations[location].population + '</div>'
+            });
+
+            google.maps.event.addListener(postcodeCircle, 'click', function (ev) {
+                infoWindow.setPosition(ev.latLng);
+                infoWindow.open(map);
+            });
         }
     </script>
 </body>
