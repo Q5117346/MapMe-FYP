@@ -17,9 +17,10 @@
 </head>
 <body>
     <div id="map"></div>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6YloPwWoNA7HcVfD1sVLQuvHqqwnLAAA&libraries=visualization&callback=initMap"></script>
-    <script>
+    <script> 
 
         var locations = {
             AB: {
@@ -509,45 +510,23 @@
             var map = new google.maps.Map(document.getElementById('map'), {
                 center: { lat: 54.9, lng: -2.5 },
                 zoom: 6,
-                styles: [{
-                    featureType: 'poi',
-                    stylers: [{ visibility: 'off' }]
-                }, {
-                    featureType: 'transit.station',
-                    stylers: [{ visibility: 'off' }]
-                }],
-                disableDoubleClickZoom: true
             });
 
             for (var location in locations) {
                 // Add the circle for this postcode to the map.
                 var postcodeCircle = new google.maps.Circle({
-                    strokeColor: '#800080',
+                    strokeColor: '#FF0000',
                     strokeOpacity: 0.8,
                     strokeWeight: 1,
-                    fillColor: '#800080',
+                    fillColor: '#FF0000',
                     fillOpacity: 0.1,
                     map: map,
                     center: locations[location].center,
                     radius: Math.sqrt(locations[location].population) * 50,
+                    name: locations[location],
+                    population: locations[location].population,
                 });
             }
-
-            var cityCircle;
-            var infoBubble = new google.maps.InfoWindow();
-            function makeBubbleHandler(circle, location) {
-                var iwOptions = {
-                    content: locations[location].story,
-                    position: locations[location].center
-                }
-                google.maps.event.addListener(circle, 'click', function () {
-                    infoBubble.setOptions(iwOptions);
-                    infoBubble.open(map);
-                });
-            }
-
-            cityCircle = new google.maps.Circle(postcodeCircle);
-            makeBubbleHandler(cityCircle, location);
         }
     </script>
 </body>

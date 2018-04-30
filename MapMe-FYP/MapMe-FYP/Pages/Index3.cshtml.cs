@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace MapMe_FYP.Pages
 {
-    public class IndexModel : PageModel
+    public class IndexModel3 : PageModel
     {
         public void OnGet()
         {

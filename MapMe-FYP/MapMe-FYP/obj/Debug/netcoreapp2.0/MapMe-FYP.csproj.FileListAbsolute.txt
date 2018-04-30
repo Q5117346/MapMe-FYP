@@ -3,7 +3,6 @@ C:\Users\q5117346\Documents\GitHub\MapMe-FYP\MapMe-FYP\MapMe-FYP\bin\Debug\netco
 C:\Users\q5117346\Documents\GitHub\MapMe-FYP\MapMe-FYP\MapMe-FYP\bin\Debug\netcoreapp2.0\MapMe-FYP.runtimeconfig.dev.json
 C:\Users\q5117346\Documents\GitHub\MapMe-FYP\MapMe-FYP\MapMe-FYP\bin\Debug\netcoreapp2.0\MapMe-FYP.dll
 C:\Users\q5117346\Documents\GitHub\MapMe-FYP\MapMe-FYP\MapMe-FYP\bin\Debug\netcoreapp2.0\MapMe-FYP.pdb
-C:\Users\q5117346\Documents\GitHub\MapMe-FYP\MapMe-FYP\MapMe-FYP\obj\Debug\netcoreapp2.0\MapMe-FYP.csprojResolveAssemblyReference.cache
 C:\Users\q5117346\Documents\GitHub\MapMe-FYP\MapMe-FYP\MapMe-FYP\obj\Debug\netcoreapp2.0\MapMe-FYP.csproj.CoreCompileInputs.cache
 C:\Users\q5117346\Documents\GitHub\MapMe-FYP\MapMe-FYP\MapMe-FYP\obj\Debug\netcoreapp2.0\MapMe-FYP.AssemblyInfoInputs.cache
 C:\Users\q5117346\Documents\GitHub\MapMe-FYP\MapMe-FYP\MapMe-FYP\obj\Debug\netcoreapp2.0\MapMe-FYP.AssemblyInfo.cs
