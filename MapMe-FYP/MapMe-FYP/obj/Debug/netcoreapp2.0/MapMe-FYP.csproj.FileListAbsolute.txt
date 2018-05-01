@@ -30,3 +30,4 @@ C:\Users\ryana\Documents\GitHub\MapMe-FYP\MapMe-FYP\MapMe-FYP\obj\Debug\netcorea
 C:\Users\ryana\Documents\GitHub\MapMe-FYP\MapMe-FYP\MapMe-FYP\obj\Debug\netcoreapp2.0\MapMe-FYP.AssemblyInfo.cs
 C:\Users\ryana\Documents\GitHub\MapMe-FYP\MapMe-FYP\MapMe-FYP\obj\Debug\netcoreapp2.0\MapMe-FYP.dll
 C:\Users\ryana\Documents\GitHub\MapMe-FYP\MapMe-FYP\MapMe-FYP\obj\Debug\netcoreapp2.0\MapMe-FYP.pdb
+C:\Users\q5117346\Documents\GitHub\MapMe-FYP\MapMe-FYP\MapMe-FYP\obj\Debug\netcoreapp2.0\MapMe-FYP.csprojResolveAssemblyReference.cache
